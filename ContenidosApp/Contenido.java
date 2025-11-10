@@ -7,13 +7,15 @@ public class Contenido {
     protected String Etiqueta;
     protected String Tipo;
     protected String Informacion;
+    protected int id;
 
-    public Contenido(String titulo, String autores, String etiqueta, String Informacion, String Tipo) {
+    public Contenido(String titulo, String autores, String etiqueta, String Informacion, String Tipo, int id) {
         this.Titulo = titulo;
         this.Autores = autores;
         this.Etiqueta = etiqueta;
         this.Informacion = Informacion;
         this.Tipo = Tipo;
+        this.id = id;
     }
     
     public String getTitulo() {
@@ -54,5 +56,13 @@ public class Contenido {
 
     public void setInformacion(String Informacion) {
         this.Informacion = Informacion;
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

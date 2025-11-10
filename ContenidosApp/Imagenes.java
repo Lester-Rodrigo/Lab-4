@@ -4,8 +4,8 @@ public class Imagenes extends Contenido implements ContenidoInterfase{
 
     
     
-    public Imagenes(String titulo, String autores, String etiqueta, String Informacion) {
-        super(titulo, autores, etiqueta, Informacion, "Imagen");
+    public Imagenes(String titulo, String autores, String etiqueta, String Informacion, int id) {
+        super(titulo, autores, etiqueta, Informacion, "Imagen", id);
     }
 
     @Override

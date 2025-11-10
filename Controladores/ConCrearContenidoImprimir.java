@@ -14,6 +14,9 @@ public class ConCrearContenidoImprimir {
     private String Autores;
     private int ContenidoCrear;
     private int tipoEtiqueta;
+    private int IdImagenes = 1;
+    private int IdVideos = 1;
+    private int IdArtículos = 0;
     
     public ConCrearContenidoImprimir () {
     }
@@ -53,7 +56,8 @@ public class ConCrearContenidoImprimir {
                 input.nextLine();
                 System.out.println("Ingrese los autores de la imágen (de no haber coloque Desconocidos): ");
                 Autores = input.nextLine();
-                conCrearContenido.CrearContenido(Titulo, Informacion, Etiqueta, Autores, ContenidoCrear);
+                IdImagenes = IdImagenes +1;
+                conCrearContenido.CrearContenido(Titulo, Informacion, Etiqueta, Autores, ContenidoCrear, IdImagenes);
                 break;
         
             case 2:
@@ -84,7 +88,8 @@ public class ConCrearContenidoImprimir {
                 input.nextLine();
                 System.out.println("Ingrese los autores del artículo (de no haber coloque Desconocidos): ");
                 Autores = input.nextLine();
-                conCrearContenido.CrearContenido(Titulo, Informacion, Etiqueta, Autores, ContenidoCrear);
+                IdArtículos = IdArtículos +1;
+                conCrearContenido.CrearContenido(Titulo, Informacion, Etiqueta, Autores, ContenidoCrear, IdArtículos);
                 break;
 
             case 3:
@@ -115,7 +120,8 @@ public class ConCrearContenidoImprimir {
                 input.nextLine();
                 System.out.println("Ingrese los autores del video (de no haber coloque Desconocidos): ");
                 Autores = input.nextLine();
-                conCrearContenido.CrearContenido(Titulo, Informacion, Etiqueta, Autores, ContenidoCrear);
+                IdVideos = IdVideos + 1;
+                conCrearContenido.CrearContenido(Titulo, Informacion, Etiqueta, Autores, ContenidoCrear, IdVideos);
                 break;
         }
         return "Contenido creado con éxito";
