@@ -3,8 +3,10 @@ package Controladores;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import ContenidosApp.Articulos;
 import ContenidosApp.Contenido;
 import ContenidosApp.Imagenes;
+import ContenidosApp.Videos;
 
 public class ConEditarContenido {
 
@@ -12,7 +14,7 @@ public class ConEditarContenido {
     private int ContenidoEditar;
     private int tipoContenido;
     private String Titulo;
-     private String Tipo;
+    private String Tipo;
     private String Informacion;
     private String Etiqueta;
     private String Autores;
@@ -180,8 +182,8 @@ public class ConEditarContenido {
                                 System.out.println("Ingrese los autores del artículo (de no haber coloque Desconocidos): ");
                                 Autores = input.nextLine();
                                 Etiqueta = contenido.getEtiqueta();
-                                Imagenes imagenes = new Imagenes(Titulo, Autores, Etiqueta, Informacion, id);
-                                contenidosCreados.add(imagenes);
+                                Articulos articulos = new Articulos(Titulo, Autores, Etiqueta, Informacion, id);
+                                contenidosCreados.add(articulos);
                                 contenidosCreados.remove(contenido);
                                 System.out.println("Contenido editado con éxito");
                             }
@@ -201,8 +203,8 @@ public class ConEditarContenido {
                                 System.out.println("Ingrese los autores del video (de no haber coloque Desconocidos): ");
                                 Autores = input.nextLine();
                                 Etiqueta = contenido.getEtiqueta();
-                                Imagenes imagenes = new Imagenes(Titulo, Autores, Etiqueta, Informacion, id);
-                                contenidosCreados.add(imagenes);
+                                Videos videos = new Videos (Titulo, Autores, Etiqueta, Informacion, id);
+                                contenidosCreados.add(videos);
                                 contenidosCreados.remove(contenido);
                                 System.out.println("Contenido editado con éxito");
                             }

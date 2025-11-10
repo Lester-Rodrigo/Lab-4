@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 import Controladores.ConCrearContenidoImprimir;
 import Controladores.ConEditarContenido;
+import Controladores.ConElimiarContenido;
+import Controladores.ConPublicarContenido;
 import Controladores.ConSeguridad;
 
 public class Main {
@@ -11,6 +13,8 @@ public class Main {
         ConSeguridad conSeguridad = new ConSeguridad();
         ConCrearContenidoImprimir conCrearContenidoImprimir = new ConCrearContenidoImprimir();
         ConEditarContenido conEditarContenido = new ConEditarContenido();
+        ConElimiarContenido conElimiarContenido = new ConElimiarContenido();
+        ConPublicarContenido conPublicarContenido = new ConPublicarContenido();
         Scanner input = new Scanner(System.in);
         int pagina;
         String tipoSesion = conSeguridad.ComprobarUsuario();
@@ -27,11 +31,11 @@ public class Main {
                 } while (pagina < 1 || pagina > 3);
                 switch (pagina) {
                     case 1:
-                        
+                        conPublicarContenido.PublicarContenidos(conCrearContenidoImprimir.getConCrearContenido().getContenidos());
                         break;
                 
                     case 2:
-                        
+                        conElimiarContenido.EliminarContenidos(conCrearContenidoImprimir.getConCrearContenido().getContenidos());
                         break;
 
                     case 3:

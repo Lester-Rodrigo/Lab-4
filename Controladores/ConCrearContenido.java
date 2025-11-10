@@ -12,13 +12,15 @@ public class ConCrearContenido {
     private ArrayList<Contenido> Contenidos = new ArrayList<>();
 
     Imagenes nuevaImagenes = new Imagenes("Hermoso amanecer", 
-    "01001001 01101101 01100001 01100111 01100101 01101110 ", "Naturaleza", "Desconocido", 1);
+    "Desconocido", "Naturaleza", "01001001 01101101 01100001 01100111 01100101 01101110", 1);
     Videos nuevoVideos = new Videos("Video musical", 
     "Rick Astley", "Música", "https://youtu.be/xvFZjo5PgG0?si=h6-un2lx2XHliXzr", 1);
+    Articulos articulos = new Articulos("Cielo y sus curiosidades", "Manuel y María Cuy", "Naturaleza", "El motivo por el cual es cielo es celeste es por la refragción de la luz", 1);
     
     public ConCrearContenido () {
-        Contenidos.add(nuevaImagenes);
         Contenidos.add(nuevoVideos);
+        Contenidos.add(nuevaImagenes);
+        Contenidos.add(articulos);
     }
 
     public void CrearContenido (String Titulo, String Informacion, String Etiqueta, String Autores, int contenido, int id) {

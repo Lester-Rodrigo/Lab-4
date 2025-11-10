@@ -16,7 +16,7 @@ public class ConCrearContenidoImprimir {
     private int tipoEtiqueta;
     private int IdImagenes = 1;
     private int IdVideos = 1;
-    private int IdArtículos = 0;
+    private int IdArtículos = 1;
     
     public ConCrearContenidoImprimir () {
     }
