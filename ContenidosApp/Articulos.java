@@ -3,7 +3,7 @@ package ContenidosApp;
 public class Articulos extends Contenido implements ContenidoInterfase{
 
     public Articulos(String titulo, String autores, String etiqueta, String Informacion, int id) {
-        super(titulo, autores, etiqueta, Informacion, "Articulos", id);
+        super(titulo, autores, etiqueta, Informacion, "Artículos", id);
     }
 
     @Override

@@ -14,7 +14,7 @@ public class ConCrearContenido {
     Imagenes nuevaImagenes = new Imagenes("Hermoso amanecer", 
     "01001001 01101101 01100001 01100111 01100101 01101110 ", "Naturaleza", "Desconocido", 1);
     Videos nuevoVideos = new Videos("Video musical", 
-    "https://youtu.be/xvFZjo5PgG0?si=h6-un2lx2XHliXzr", "Música", "Rick Astley", 1);
+    "Rick Astley", "Música", "https://youtu.be/xvFZjo5PgG0?si=h6-un2lx2XHliXzr", 1);
     
     public ConCrearContenido () {
         Contenidos.add(nuevaImagenes);
